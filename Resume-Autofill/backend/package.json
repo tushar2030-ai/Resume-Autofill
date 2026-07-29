@@ -1,0 +1,7 @@
+{
+  "name": "resume-autofill-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Proxy server for Resume AutoFill extension - holds the Gemini API key server-side.",
+  "dependencies": {}
+}

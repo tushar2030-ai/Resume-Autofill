@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Resume AutoFill</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>Resume AutoFill</h1>
+
+    <section id="uploadSection">
+      <label class="fileLabel" for="fileInput">
+        <span id="fileLabelText">Choose resume PDF</span>
+        <input type="file" id="fileInput" accept="application/pdf" />
+      </label>
+      <button id="parseBtn" disabled>Extract profile</button>
+      <p class="hint">PDF only for now. Text paste fallback below if you don't have a PDF handy.</p>
+      <details>
+        <summary>Paste resume text instead</summary>
+        <textarea id="pasteText" rows="6" placeholder="Paste your resume text here"></textarea>
+        <button id="parsePasteBtn">Extract from pasted text</button>
+      </details>
+      <p id="status"></p>
+    </section>
+
+    <section id="profileSection" class="hidden">
+      <div class="profileCard">
+        <strong id="profileName"></strong>
+        <span id="profileEmail"></span>
+      </div>
+      <button id="fillBtn" class="primary">Fill current page</button>
+      <a href="#" id="editProfileLink">Edit / review extracted profile</a>
+      <a href="#" id="reuploadLink">Upload a different resume</a>
+    </section>
+
+    <footer>
+      <a href="#" id="optionsLink">Settings</a>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
